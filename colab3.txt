@@ -1,0 +1,6 @@
+Tu objetivo:
+1) Escribe una lista de 5 tareas que harás esta semana con Git.
+2) Sin confirmar, haz un `git stash` para guardar estos cambios.
+3) Cambia a main y haz `git pull` (solo para practicar el cambio de contexto).
+4) Regresa a tu rama colab3 y aplica `git stash pop`.
+5) Completa las 5 tareas con una frase extra cada una, luego `add + commit + push`.

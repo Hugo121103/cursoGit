@@ -1,0 +1,8 @@
+Tu objetivo:
+1) Escribe un checklist final de 7 puntos para "Terminar bien un feature" (tests, README, lint, etc.).
+2) Haz commit + push.
+3) Abre un Pull Request o haz merge local a main.
+4) Una vez integrado, elimina tu rama local y remota:
+   - Local: git branch -d colab7
+   - Remota: git push origin --delete colab7
+5) En este archivo, al final, añade una nota sobre cuándo SÍ y cuándo NO conviene borrar ramas.

@@ -1,0 +1,6 @@
+Tu objetivo (en este txt):
+1) Escribe tu nombre y hoy qué esperas aprender de Git (3 bullets).
+2) Agrega una segunda sección llamada "Comandos útiles" con 3 comandos que hoy te llamaron la atención.
+3) Crea un commit con mensaje: "colab1: expectativas y comandos".
+4) Haz push a tu rama (colab1).
+5) Cambia a main, haz pull, vuelve a tu rama y actualiza lo que haga falta si hay cambios.

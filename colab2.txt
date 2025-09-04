@@ -1,0 +1,5 @@
+Tu objetivo (en este txt):
+1) En colab2.txt, agrega una sección "Glosario" con 5 términos: repositorio, commit, rama, merge, stash (definición breve).
+2) Confirma y sube (commit + push).
+3) Cambia a main, haz pull (actualízate), y regresa a colab2.
+4) Simula que olvidaste agregar un término adicional "remote" y agrégalo ahora; vuelve a hacer commit + push.

@@ -1,0 +1,6 @@
+Tu objetivo:
+1) Agrega un encabezado: "Guía rápida para resolver conflictos".
+2) Escribe 4 pasos concretos para resolver un conflicto (editar, añadir, confirmar, continuar).
+3) Para provocar conflicto con colab4, **edita la MISMA PRIMERA línea** de este archivo con un texto distinto.
+4) Commit + push.
+5) Después, cuando se haga merge de colab4 y colab5 a main, participa en la resolución del conflicto editando el archivo para conservar lo mejor de ambos.

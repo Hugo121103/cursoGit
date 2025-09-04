@@ -1,0 +1,9 @@
+Tu objetivo:
+1) Agrega una sección: "Historial" y escribe por qué es útil `git log`.
+2) Haz un commit intermedio con un texto que luego vas a modificar.
+3) Modifica esa misma sección de forma evidente (p.ej., añade una frase contradictoria).
+4) Usa `git diff` para ver cambios.
+5) Decide:
+   - (A) Mantener cambios y `commit + push`, o
+   - (B) Restaurar el archivo a la versión anterior (usa `git restore --source <commit> colab6.txt` o `git checkout <commit> -- colab6.txt`), y luego `commit + push`.
+En el mensaje de commit explica tu decisión.

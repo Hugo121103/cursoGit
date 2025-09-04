@@ -1,0 +1,6 @@
+Tu objetivo:
+1) Agrega un encabezado: "Reglas de merge".
+2) Añade 3 reglas de buenas prácticas para hacer merges limpios.
+3) IMPORTANTE: En la PRÁCTICA DE CONFLICTOS, **edita también la PRIMERA línea de colab5.txt en tu rama** (por ejemplo: "Regla colab4 sobre colab5").
+4) Commit + push.
+5) Cuando se integre tu rama, revisa si hubo conflicto con colab5. Si lo hay, resuélvelo.
