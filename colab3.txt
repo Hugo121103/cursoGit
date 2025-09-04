@@ -4,3 +4,51 @@ Tu objetivo:
 3) Cambia a main y haz `git pull` (solo para practicar el cambio de contexto).
 4) Regresa a tu rama colab3 y aplica `git stash pop`.
 5) Completa las 5 tareas con una frase extra cada una, luego `add + commit + push`.
+
+
+
+
+Stash + Conflicto C con colab6; colabora en rama de colab6
+
+En tu rama (colab3): crea base y usa stash
+
+git checkout colab3
+# En colab3.txt crea la sección "Tareas" con 5 bullets.
+git stash              # guarda cambios sin commit
+git checkout main
+git pull origin main
+git checkout colab3
+git stash pop          # recupera cambios
+
+
+Propicia el Conflicto C
+
+# Cambia el ítem 3 de "Tareas" a:
+#   "Tarea 3: usar tags para versiones"
+git add colab3.txt
+git commit -m "colab3: tareas y Conflicto C (ítem 3)"
+git push origin colab3
+
+
+Colabora en la rama de colab6
+
+git fetch
+git checkout colab6
+# En colab6.txt, bajo "Historial", añade:
+#  "git log --oneline: vista compacta de commits"
+git add colab6.txt
+git commit -m "colab3 en colab6: nota de historial"
+git push origin colab6
+
+
+Integra tu rama cuando toque
+
+git checkout main
+git pull origin main
+git merge --no-ff colab3
+# Si aparece Conflicto C (con colab6 en colab3.txt):
+#   - Abre colab3.txt y combina el ítem 3 en una versión única, p.ej.:
+#     "Tarea 3: usar tags y documentar versiones en el changelog"
+git add colab3.txt
+git commit
+git push origin main

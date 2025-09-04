@@ -4,3 +4,37 @@ Tu objetivo:
 3) IMPORTANTE: En la PRÁCTICA DE CONFLICTOS, **edita también la PRIMERA línea de colab5.txt en tu rama** (por ejemplo: "Regla colab4 sobre colab5").
 4) Commit + push.
 5) Cuando se integre tu rama, revisa si hubo conflicto con colab5. Si lo hay, resuélvelo.
+
+
+Dinamica: 
+
+Prepara Conflicto B con colab5 y colabora en colab1
+
+En tu rama (colab4)
+
+git checkout colab4
+# En colab4.txt agrega "Reglas de merge" (3 buenas prácticas).
+# Además, edita la PRIMERA LÍNEA de colab5.txt a:
+#   "Guía de conflictos (edición colab4)"
+git add colab4.txt colab5.txt
+git commit -m "colab4: reglas de merge y Conflicto B en colab5.txt"
+git push origin colab4
+
+
+Colabora en la rama de colab1
+
+git fetch
+git checkout colab1
+# En colab1.txt añade al final:
+#   "Sugerencia colab4: usar mensajes de commit claros"
+git add colab1.txt
+git commit -m "colab4 en colab1: sugerencia de mensajes"
+git push origin colab1
+
+
+Integra tu rama primero (para forzar Conflicto B después)
+
+git checkout main
+git pull origin main
+git merge --no-ff colab4
+git push origin main

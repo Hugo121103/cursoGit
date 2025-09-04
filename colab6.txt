@@ -7,3 +7,37 @@ Tu objetivo:
    - (A) Mantener cambios y `commit + push`, o
    - (B) Restaurar el archivo a la versión anterior (usa `git restore --source <commit> colab6.txt` o `git checkout <commit> -- colab6.txt`), y luego `commit + push`.
 En el mensaje de commit explica tu decisión.
+
+
+Dinamica:Historial + Conflicto C con colab3; colabora en colab3
+
+En tu rama (colab6)
+
+git checkout colab6
+# En colab6.txt escribe "Historial" (por qué usar git log) y commit.
+git add colab6.txt
+git commit -m "colab6: sección Historial"
+git push origin colab6
+
+
+Propicia Conflicto C (en colab3.txt)
+
+git fetch
+git checkout colab3
+# Cambia el ítem 3 de "Tareas" a un texto distinto, p.ej.:
+#   "Tarea 3: crear tags y release notes"
+git add colab3.txt
+git commit -m "colab6 en colab3: Conflicto C (ítem 3 distinto)"
+git push origin colab3
+
+
+Integra tu rama cuando toque y resuelve Conflicto C si aparece
+
+git checkout main
+git pull origin main
+git merge --no-ff colab6
+# Si el conflicto ocurre aquí (menos común) resuélvelo combinando:
+#   "Tarea 3: usar tags, versiones y release notes documentadas"
+git add colab3.txt
+git commit
+git push origin main

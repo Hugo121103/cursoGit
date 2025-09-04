@@ -3,3 +3,38 @@ Tu objetivo (en este txt):
 2) Confirma y sube (commit + push).
 3) Cambia a main, haz pull (actualízate), y regresa a colab2.
 4) Simula que olvidaste agregar un término adicional "remote" y agrégalo ahora; vuelve a hacer commit + push.
+
+
+Dinamica: 
+Propicia Conflicto A y colabora en rama de colab1
+
+En tu rama (colab2)
+
+git checkout colab2
+# Edita README.md línea 1 a:
+#   "Cursito de Git – Equipo"
+git add README.md colab2.txt
+git commit -m "colab2: portada README y edición glosario"
+git push origin colab2
+
+
+Cámbiate a la rama de colab1 y colabora
+
+git fetch
+git checkout colab1
+# En colab1.txt, agrega en “Comandos útiles”:
+#   git log --oneline --graph --decorate --all
+git add colab1.txt
+git commit -m "colab2 en colab1: comando de historial"
+git push origin colab1
+
+
+Intenta integrar tu rama (PR o local)
+
+git checkout main
+git pull origin main
+git merge --no-ff colab2   # si aparece Conflicto A con colab1
+# Edita README.md y combina el título (ver ejemplo en colab1)
+git add README.md
+git commit
+git push origin main

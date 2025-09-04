@@ -4,3 +4,42 @@ Tu objetivo:
 3) Para provocar conflicto con colab4, **edita la MISMA PRIMERA línea** de este archivo con un texto distinto.
 4) Commit + push.
 5) Después, cuando se haga merge de colab4 y colab5 a main, participa en la resolución del conflicto editando el archivo para conservar lo mejor de ambos.
+
+
+Dinamica: 
+Provoca Conflicto B y resuélvelo; colabora en colab7
+
+En tu rama (colab5)
+
+git checkout colab5
+# Cambia la MISMA PRIMERA LÍNEA de colab5.txt a:
+#   "Guía de conflictos (edición colab5)"
+# Añade tu "Guía rápida para resolver conflictos" (4 pasos).
+git add colab5.txt
+git commit -m "colab5: guía y Conflicto B intencional"
+git push origin colab5
+
+
+Colabora en la rama de colab7
+
+git fetch
+git checkout colab7
+# En colab7.txt, añade un punto extra al checklist, p.ej.:
+#   "Revisar CI/CD pasa en remoto antes del merge"
+git add colab7.txt
+git commit -m "colab5 en colab7: checklist CI/CD"
+git push origin colab7
+
+
+Integra tu rama y resuelve Conflicto B
+
+Como colab4 ya está en main, al integrar colab5 chocará la primera línea de colab5.txt.
+
+git checkout main
+git pull origin main
+git merge --no-ff colab5   # conflicto en colab5.txt
+# Edita colab5.txt primera línea combinando ideas:
+#  "Guía de conflictos (criterios colab4 + colab5)"
+git add colab5.txt
+git commit
+git push origin main

@@ -6,3 +6,45 @@ Tu objetivo:
    - Local: git branch -d colab7
    - Remota: git push origin --delete colab7
 5) En este archivo, al final, añade una nota sobre cuándo SÍ y cuándo NO conviene borrar ramas.
+
+
+Dinamica:
+Integrador final y limpieza; colabora en colab4
+
+Colabora en rama de colab4
+
+git fetch
+git checkout colab4
+# En colab4.txt añade una regla extra:
+#   "Antes de mergear, sincroniza tu rama con main (rebase o merge)"
+git add colab4.txt
+git commit -m "colab7 en colab4: regla de sincronización previa"
+git push origin colab4
+
+
+Actúa como integrador y limpia ramas
+
+Hazlo al final, cuando A y B y C estén resueltos.
+
+git checkout main
+git pull origin main
+
+# (Si falta algo por integrar:)
+git merge --no-ff colab1
+git merge --no-ff colab2
+git merge --no-ff colab3
+git merge --no-ff colab4
+git merge --no-ff colab5
+git merge --no-ff colab6
+git merge --no-ff colab7
+git push origin main
+
+# Elimina ramas integradas (local y remoto):
+git branch -d colab1 colab2 colab3 colab4 colab5 colab6 colab7
+git push origin --delete colab1
+git push origin --delete colab2
+git push origin --delete colab3
+git push origin --delete colab4
+git push origin --delete colab5
+git push origin --delete colab6
+git push origin --delete colab7

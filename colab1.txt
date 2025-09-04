@@ -4,3 +4,55 @@ Tu objetivo (en este txt):
 3) Crea un commit con mensaje: "colab1: expectativas y comandos".
 4) Haz push a tu rama (colab1).
 5) Cambia a main, haz pull, vuelve a tu rama y actualiza lo que haga falta si hay cambios.
+
+
+
+Dinamica: 
+Propicia Conflicto A y colabora en rama de colab2
+
+En tu rama (colab1)
+
+git checkout colab1
+# Edita README.md línea 1 a:
+#   "Curso Git – Edición colab1"
+git add README.md colab1.txt
+git commit -m "colab1: portada README y edición inicial"
+git push origin colab1
+
+
+Cámbiate a la rama de colab2 y colabora
+
+git fetch
+git checkout colab2
+# Abre colab2.txt y añade al final de "Glosario": 
+#   remote: servidor que aloja el repo (origin)
+git add colab2.txt
+git commit -m "colab1 en colab2: añade 'remote' al glosario"
+git push origin colab2
+
+
+Vuelve a main y actualiza
+
+git checkout main
+git pull origin main
+
+
+Prepara y ejecuta merge (local) de tu rama
+
+Es probable que choque luego con colab2 en README.md (Conflicto A).
+
+git merge --no-ff colab1
+# Si no hay conflicto aún, push:
+git push origin main
+
+
+Cuando colab2 se integre primero y cause conflicto al integrar colab1
+
+git checkout main
+git pull origin main
+git merge colab1   # aquí puede aparecer Conflicto A en README.md
+# Edita README.md y deja un título combinado, p.ej.:
+# "Cursito de Git – Equipo | Edición colab1 + colab2"
+git add README.md
+git commit
+git push origin main
